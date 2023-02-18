@@ -165,7 +165,7 @@ adduserandpass || error "Error adding username and/or password."
 # Refresh Arch keyrings.
 refreshkeys || error "Error automatically refreshing Arch keyring. Consider doing so manually."
 
-chaoticsetup || error "Error adding the chaotic-aur repository."
+
 
 dialog --title "AARGH Installation" --infobox "Installing \`basedevel\` and \`git\` for installing other software required for the installation of other programs." 5 70
 installpkg curl base-devel git ntp
