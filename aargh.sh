@@ -28,7 +28,7 @@ grepseq="\"^[PGA]*,\""
 error() { clear; printf "ERROR:\\n%s\\n" "$1"; exit;}
 
 welcomemsg() { \
-	dialog --title "Welcome!" --msgbox "Welcome to Fra's An Arch Ricing Gentle Helper!\\n\\nThis script will automatically install a fully-featured Linux desktop, which I use as my main machine.\\n\\n-Fra" 10 60
+	dialog --title "Welcome!" --msgbox "Welcome to Esmos An Arch Ricing Gentle Helper!\\n\\nThis script will automatically install a fully-featured Linux desktop, which I use as my main machine.\\n\\n-Fra" 10 60
 
 	dialog --colors --title "Important Note!" --yes-label "All ready!" --no-label "Return..." --yesno "Be sure the computer you are using has current pacman updates and refreshed Arch keyrings.\\n\\nIf it does not, the installation of some programs might fail." 8 70
 	}
@@ -70,13 +70,11 @@ refreshkeys() { \
 	pacman --noconfirm -Sy archlinux-keyring >/dev/null 2>&1
 	}
 
-chaoticsetup() { \
-	dialog --infobox "Adding the Chaotic AUR Repository..." 4 40
-	if ! grep -qF "chaotic-aur" /etc/pacman.conf; then
-		printf "\n# Chaotic AUR\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | tee -a /etc/pacman.conf
-	fi
-	pacman -Sy >/dev/null 2>&1
-	}
+
+	
+		 
+	
+	
 
 newperms() { # Set special sudoers settings for install (or after).
 	sed -i "/#AARGH/d" /etc/sudoers
